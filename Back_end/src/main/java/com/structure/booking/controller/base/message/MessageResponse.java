@@ -1,4 +1,4 @@
-package com.fpt.booking.controller.base.message;
+package com.structure.booking.controller.base.message;
 
 import lombok.*;
 

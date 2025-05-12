@@ -1,4 +1,4 @@
-package com.fpt.booking.domain.payload.response;
+package com.structure.booking.domain.payload.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package com.fpt.booking;
+package com.structure.booking;
 
-import com.fpt.booking.config.AppProperties;
+import com.structure.booking.config.AppProperties;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,16 +1,12 @@
-package com.fpt.booking.domain.entities;
+package com.structure.booking.domain.entities;
 
-
-
-import com.fpt.booking.domain.enums.RoleName;
+import com.structure.booking.domain.enums.RoleName;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
-
-
 
 @Entity
 @Table(name = "roles")

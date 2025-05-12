@@ -1,6 +1,6 @@
-package com.fpt.booking.repository;
+package com.structure.booking.repository;
 
-import com.fpt.booking.domain.entities.Driver;
+import com.structure.booking.domain.entities.Driver;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

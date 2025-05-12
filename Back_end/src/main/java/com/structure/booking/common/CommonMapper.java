@@ -1,4 +1,4 @@
-package com.fpt.booking.common;
+package com.structure.booking.common;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

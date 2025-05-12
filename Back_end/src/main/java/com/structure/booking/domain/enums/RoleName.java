@@ -1,4 +1,4 @@
-package com.fpt.booking.domain.enums;
+package com.structure.booking.domain.enums;
 
 public enum RoleName {
     ROLE_USER("ROLE_USER"),

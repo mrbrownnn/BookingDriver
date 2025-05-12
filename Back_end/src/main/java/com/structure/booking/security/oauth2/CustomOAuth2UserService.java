@@ -1,20 +1,18 @@
-package com.fpt.booking.secruity.oauth2;
+package com.structure.booking.security.oauth2;
 
-
-
-import com.fpt.booking.config.ResourceBundleConfig;
-import com.fpt.booking.domain.entities.Role;
-import com.fpt.booking.domain.entities.User;
-import com.fpt.booking.domain.enums.AuthProvider;
-import com.fpt.booking.domain.enums.RoleName;
-import com.fpt.booking.exception.BadRequestException;
-import com.fpt.booking.exception.OAuth2AuthenticationProcessingException;
-import com.fpt.booking.repository.RoleRepository;
-import com.fpt.booking.repository.UserRepository;
-import com.fpt.booking.secruity.UserPrincipal;
-import com.fpt.booking.secruity.oauth2.user.OAuth2UserInfo;
-import com.fpt.booking.secruity.oauth2.user.OAuth2UserInfoFactory;
-import com.fpt.booking.utils.MessageUtils;
+import com.structure.booking.config.ResourceBundleConfig;
+import com.structure.booking.domain.entities.Role;
+import com.structure.booking.domain.entities.User;
+import com.structure.booking.domain.enums.AuthProvider;
+import com.structure.booking.domain.enums.RoleName;
+import com.structure.booking.exception.BadRequestException;
+import com.structure.booking.exception.OAuth2AuthenticationProcessingException;
+import com.structure.booking.repository.RoleRepository;
+import com.structure.booking.repository.UserRepository;
+import com.structure.booking.security.UserPrincipal;
+import com.structure.booking.security.oauth2.user.OAuth2UserInfo;
+import com.structure.booking.security.oauth2.user.OAuth2UserInfoFactory;
+import com.structure.booking.utils.MessageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;

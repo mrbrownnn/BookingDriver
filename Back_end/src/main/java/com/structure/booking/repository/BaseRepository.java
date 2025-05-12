@@ -1,4 +1,4 @@
-package com.fpt.booking.repository;
+package com.structure.booking.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.*;

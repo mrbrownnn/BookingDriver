@@ -1,4 +1,4 @@
-package com.fpt.booking.domain.payload.request;
+package com.structure.booking.domain.payload.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

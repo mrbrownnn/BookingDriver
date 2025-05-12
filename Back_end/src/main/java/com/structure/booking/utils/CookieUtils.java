@@ -1,4 +1,4 @@
-package com.fpt.booking.utils;
+package com.structure.booking.utils;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

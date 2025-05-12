@@ -1,4 +1,4 @@
-package com.fpt.booking.utils;
+package com.structure.booking.utils;
 
 public class Regex {
     public static final String PHONE_VALIDATION = "(0[3|5|7|8|9])+([0-9]{8})";

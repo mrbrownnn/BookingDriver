@@ -1,11 +1,9 @@
-package com.fpt.booking.secruity.oauth2;
+package com.structure.booking.security.oauth2;
 
-
-
-import com.fpt.booking.config.AppProperties;
-import com.fpt.booking.exception.BadRequestException;
-import com.fpt.booking.secruity.TokenProvider;
-import com.fpt.booking.utils.CookieUtils;
+import com.structure.booking.config.AppProperties;
+import com.structure.booking.exception.BadRequestException;
+import com.structure.booking.security.TokenProvider;
+import com.structure.booking.utils.CookieUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,13 +14,11 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationSu
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
-
 import java.io.IOException;
 import java.net.URI;
 import java.util.Optional;
 
-import static com.fpt.booking.secruity.oauth2.HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
-
+import static com.structure.booking.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
 @Component
 public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {

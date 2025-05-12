@@ -1,7 +1,7 @@
-package com.fpt.booking.domain.entities;
+package com.structure.booking.domain.entities;
 
-import com.fpt.booking.domain.enums.BookingStatus;
-import com.fpt.booking.domain.enums.DateAudit;
+import com.structure.booking.domain.enums.BookingStatus;
+import com.structure.booking.domain.enums.DateAudit;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

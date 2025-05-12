@@ -1,4 +1,4 @@
-package com.fpt.booking.domain.payload.response;
+package com.structure.booking.domain.payload.response;
 
 import lombok.Builder;
 import lombok.Getter;

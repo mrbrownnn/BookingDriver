@@ -1,10 +1,7 @@
-package com.fpt.booking.repository;
+package com.structure.booking.repository;
 
-
-
-
-import com.fpt.booking.domain.entities.Role;
-import com.fpt.booking.domain.enums.RoleName;
+import com.structure.booking.domain.entities.Role;
+import com.structure.booking.domain.enums.RoleName;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

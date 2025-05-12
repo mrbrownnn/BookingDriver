@@ -1,8 +1,7 @@
-package com.fpt.booking.secruity.oauth2.user;
+package com.structure.booking.security.oauth2.user;
 
-
-import com.fpt.booking.domain.enums.AuthProvider;
-import com.fpt.booking.exception.OAuth2AuthenticationProcessingException;
+import com.structure.booking.domain.enums.AuthProvider;
+import com.structure.booking.exception.OAuth2AuthenticationProcessingException;
 
 import java.util.Map;
 

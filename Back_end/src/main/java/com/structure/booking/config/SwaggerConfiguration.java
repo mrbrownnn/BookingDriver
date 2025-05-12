@@ -1,4 +1,4 @@
-package com.fpt.booking.config;
+package com.structure.booking.config;
 
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;

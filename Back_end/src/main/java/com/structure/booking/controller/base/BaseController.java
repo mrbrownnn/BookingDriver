@@ -1,9 +1,7 @@
-package com.fpt.booking.controller.base;
+package com.structure.booking.controller.base;
 
-
-
-import com.fpt.booking.controller.base.message.BaseMessage;
-import com.fpt.booking.controller.base.message.ExtendedMessage;
+import com.structure.booking.controller.base.message.BaseMessage;
+import com.structure.booking.controller.base.message.ExtendedMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

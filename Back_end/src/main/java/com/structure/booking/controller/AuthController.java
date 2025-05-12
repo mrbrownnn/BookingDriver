@@ -1,13 +1,14 @@
-package com.fpt.booking.controller;
+package com.structure.booking.controller;
 
-import com.fpt.booking.common.Constant;
-import com.fpt.booking.controller.base.BaseController;
-import com.fpt.booking.controller.base.message.ExtendedMessage;
-import com.fpt.booking.domain.payload.request.LoginRequest;
-import com.fpt.booking.domain.payload.request.SignUpRequest;
-import com.fpt.booking.domain.payload.response.UserResponse;
-import com.fpt.booking.repository.UserRepository;
-import com.fpt.booking.services.AuthService;
+import com.structure.booking.common.Constant;
+import com.structure.booking.controller.base.BaseController;
+import com.structure.booking.controller.base.message.ExtendedMessage;
+import com.structure.booking.domain.payload.request.LoginRequest;
+import com.structure.booking.domain.payload.request.SignUpRequest;
+import com.structure.booking.domain.payload.response.AuthResponse;
+import com.structure.booking.domain.payload.response.UserResponse;
+import com.structure.booking.repository.UserRepository;
+import com.structure.booking.services.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

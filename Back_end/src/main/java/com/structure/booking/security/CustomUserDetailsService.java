@@ -1,15 +1,11 @@
-package com.fpt.booking.secruity;
+package com.structure.booking.security;
 
-
-
-
-
-import com.fpt.booking.config.ResourceBundleConfig;
-import com.fpt.booking.domain.entities.User;
-import com.fpt.booking.exception.BadRequestException;
-import com.fpt.booking.exception.ResourceNotFoundException;
-import com.fpt.booking.repository.UserRepository;
-import com.fpt.booking.utils.MessageUtils;
+import com.structure.booking.config.ResourceBundleConfig;
+import com.structure.booking.domain.entities.User;
+import com.structure.booking.exception.BadRequestException;
+import com.structure.booking.exception.ResourceNotFoundException;
+import com.structure.booking.repository.UserRepository;
+import com.structure.booking.utils.MessageUtils;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

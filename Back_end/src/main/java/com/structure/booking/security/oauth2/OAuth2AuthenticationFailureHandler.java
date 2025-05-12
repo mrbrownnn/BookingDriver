@@ -1,8 +1,6 @@
-package com.fpt.booking.secruity.oauth2;
+package com.structure.booking.security.oauth2;
 
-
-
-import com.fpt.booking.utils.CookieUtils;
+import com.structure.booking.utils.CookieUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
-
 
 @Component
 public class OAuth2AuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {

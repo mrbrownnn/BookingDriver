@@ -1,4 +1,4 @@
-package com.fpt.booking.utils;
+package com.structure.booking.utils;
 
 public class MessageUtils {
     public static final String BLOCK_ACCOUNT = "error.account.block";

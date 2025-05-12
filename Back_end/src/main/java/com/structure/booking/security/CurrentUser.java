@@ -1,4 +1,4 @@
-package com.fpt.booking.secruity;
+package com.structure.booking.security;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 

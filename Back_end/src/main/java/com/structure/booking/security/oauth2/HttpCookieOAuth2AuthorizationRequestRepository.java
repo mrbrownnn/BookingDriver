@@ -1,15 +1,12 @@
-package com.fpt.booking.secruity.oauth2;
+package com.structure.booking.security.oauth2;
 
-
-
-import com.fpt.booking.utils.CookieUtils;
+import com.structure.booking.utils.CookieUtils;
 import com.nimbusds.oauth2.sdk.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.oauth2.client.web.AuthorizationRequestRepository;
 import org.springframework.security.oauth2.core.endpoint.OAuth2AuthorizationRequest;
 import org.springframework.stereotype.Component;
-
 
 @Component
 public class HttpCookieOAuth2AuthorizationRequestRepository implements AuthorizationRequestRepository<OAuth2AuthorizationRequest> {
@@ -43,7 +40,6 @@ public class HttpCookieOAuth2AuthorizationRequestRepository implements Authoriza
     public OAuth2AuthorizationRequest removeAuthorizationRequest(HttpServletRequest request, HttpServletResponse response) {
         return this.loadAuthorizationRequest(request);
     }
-
 
     public void removeAuthorizationRequestCookies(HttpServletRequest request, HttpServletResponse response) {
         CookieUtils.deleteCookie(request, response, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME);

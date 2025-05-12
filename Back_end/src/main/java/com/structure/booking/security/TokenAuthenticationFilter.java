@@ -1,8 +1,8 @@
-package com.fpt.booking.secruity;
+package com.structure.booking.security;
 
 
-import com.fpt.booking.domain.entities.User;
-import com.fpt.booking.repository.UserRepository;
+import com.structure.booking.domain.entities.User;
+import com.structure.booking.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

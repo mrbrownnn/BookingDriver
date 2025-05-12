@@ -1,4 +1,4 @@
-package com.fpt.booking.exception;
+package com.structure.booking.exception;
 
 import org.springframework.security.core.AuthenticationException;
 

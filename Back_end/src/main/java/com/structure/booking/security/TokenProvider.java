@@ -1,10 +1,8 @@
-package com.fpt.booking.secruity;
+package com.structure.booking.security;
 
-
-
-import com.fpt.booking.config.AppProperties;
-import com.fpt.booking.domain.entities.User;
-import com.fpt.booking.repository.UserRepository;
+import com.structure.booking.config.AppProperties;
+import com.structure.booking.domain.entities.User;
+import com.structure.booking.repository.UserRepository;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 
 import java.util.Date;
 

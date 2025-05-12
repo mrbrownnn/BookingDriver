@@ -1,4 +1,4 @@
-package com.fpt.booking;
+package com.structure.booking;
 
 import org.springframework.boot.test.context.SpringBootTest;
 

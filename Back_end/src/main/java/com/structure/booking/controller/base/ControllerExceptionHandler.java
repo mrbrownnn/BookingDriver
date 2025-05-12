@@ -1,4 +1,4 @@
-package com.fpt.booking.controller.base;
+package com.structure.booking.controller.base;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.fpt.booking.config;
+package com.structure.booking.config;
 
 import org.springframework.stereotype.Component;
 

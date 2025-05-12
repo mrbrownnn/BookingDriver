@@ -1,12 +1,12 @@
-package com.fpt.booking.config;
+package com.structure.booking.config;
 
-
-import com.fpt.booking.secruity.CustomUserDetailsService;
-import com.fpt.booking.secruity.TokenAuthenticationFilter;
-import com.fpt.booking.secruity.oauth2.CustomOAuth2UserService;
-import com.fpt.booking.secruity.oauth2.HttpCookieOAuth2AuthorizationRequestRepository;
-import com.fpt.booking.secruity.oauth2.OAuth2AuthenticationFailureHandler;
-import com.fpt.booking.secruity.oauth2.OAuth2AuthenticationSuccessHandler;
+import com.structure.booking.security.CustomUserDetailsService;
+import com.structure.booking.security.RestAuthenticationEntryPoint;
+import com.structure.booking.security.TokenAuthenticationFilter;
+import com.structure.booking.security.oauth2.CustomOAuth2UserService;
+import com.structure.booking.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository;
+import com.structure.booking.security.oauth2.OAuth2AuthenticationFailureHandler;
+import com.structure.booking.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
 
 @Configuration
 @EnableWebSecurity
@@ -56,30 +55,28 @@ public class SecurityConfig {
     public SecurityConfig() {
     }
 
-        @Bean
-        public BCryptPasswordEncoder passwordEncoder () {
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-        @Bean
-        public TokenAuthenticationFilter tokenAuthenticationFilter () {
+    @Bean
+    public TokenAuthenticationFilter tokenAuthenticationFilter() {
         return new TokenAuthenticationFilter();
     }
 
-        @Bean
-        public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository () {
+    @Bean
+    public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
         return new HttpCookieOAuth2AuthorizationRequestRepository();
     }
 
-        @Bean
-        AuthenticationManager authenticationManager (
-            AuthenticationConfiguration authenticationConfiguration) throws Exception {
+    @Bean
+    AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-
-        @Bean
-        public DaoAuthenticationProvider authenticationProvider () {
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 
         authProvider.setUserDetailsService(customUserDetailsService);
@@ -88,9 +85,8 @@ public class SecurityConfig {
         return authProvider;
     }
 
-
-        @Bean
-        public SecurityFilterChain filterChain (HttpSecurity http) throws Exception {
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry.requestMatchers(HttpMethod.DELETE).hasRole("ADMIN")
@@ -123,9 +119,8 @@ public class SecurityConfig {
         return http.build();
     }
 
-
-        @Bean
-        public WebSecurityCustomizer webSecurityCustomizer () {
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
         return web -> web.ignoring().requestMatchers("/", "/send", "/ws/**", "/room/**", "/error", "/favicon.ico", "/**/*.png", "/**/*.gif", "/**/*.svg", "/**/*.jpg", "/**/*.html", "/**/*.css", "/**/*.js", "/lib/**", "/favicon.ico", "/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**", "/configuration/security", "/configuration/ui");
     }
 }

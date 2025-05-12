@@ -1,7 +1,7 @@
-package com.fpt.booking.exception;
+package com.structure.booking.exception;
 
 
-import com.fpt.booking.domain.payload.response.MessageResponse;
+import com.structure.booking.domain.payload.response.MessageResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;

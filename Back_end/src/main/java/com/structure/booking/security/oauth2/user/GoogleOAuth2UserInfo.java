@@ -1,4 +1,4 @@
-package com.fpt.booking.secruity.oauth2.user;
+package com.structure.booking.security.oauth2.user;
 
 import java.util.Map;
 

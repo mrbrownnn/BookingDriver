@@ -1,12 +1,11 @@
-package com.fpt.booking.domain.entities;
-
-
+package com.structure.booking.domain.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fpt.booking.domain.enums.AuthProvider;
-import com.fpt.booking.domain.enums.DateAudit;
+import com.structure.booking.domain.enums.AuthProvider;
+import com.structure.booking.domain.enums.DateAudit;
+import com.structure.booking.domain.enums.RoleName;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -14,10 +13,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 import java.util.ArrayList;
 import java.util.HashSet;
-
 import java.util.Set;
 
 @Entity

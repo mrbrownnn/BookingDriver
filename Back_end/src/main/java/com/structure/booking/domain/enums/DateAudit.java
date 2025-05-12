@@ -1,4 +1,4 @@
-package com.fpt.booking.domain.enums;
+package com.structure.booking.domain.enums;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.EntityListeners;
