@@ -2,7 +2,7 @@
 # Build stage
 #
 # Use the official Maven/Java 17 image
-FROM maven:3.8.8-openjdk-17 AS build
+FROM maven:3.8.3-openjdk-17 AS build
 LABEL authors="Thanh_Pham"
 COPY ./src /home/booking/src
 COPY pom.xml /home/booking

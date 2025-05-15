@@ -9,7 +9,7 @@ services:
       - MYSQL_PASSWORD=${DB_PASSWORD:-yoursecret}
       - MYSQL_DATABASE=${DB_DATABASE:-yourdatabase}
     ports:
-      - "3310:3309"
+      - "3306:3307"
     volumes:
       - ./mysql-dump:/docker-entrypoint-initdb.d
   api_service:
