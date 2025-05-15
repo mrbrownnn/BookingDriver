@@ -1,6 +1,6 @@
-package com.fpt.booking.services.impl;
+package com.structure.booking.services.impl;
 
-import com.fpt.booking.secruity.UserPrincipal;
+import com.structure.booking.security.UserPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 public abstract class BaseService {
