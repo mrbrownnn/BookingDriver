@@ -42,4 +42,16 @@ public class BookingController extends BaseController {
     public ResponseEntity<?> getAllBookings() {
         return createSuccessResponse("Lấy tất cả booking thành công", bookingService.getAllBookings());
     }
+
+    @PutMapping("/accept")
+    public ResponseEntity<?> acceptBooking(@RequestParam Long bookingId, @RequestParam Long driverId) {
+        BookingResponse response = bookingService.acceptBooking(bookingId, driverId);
+        return createSuccessResponse("Tài xế đã nhận chuyến đi", response);
+    }
+
+    @PutMapping("/complete")
+    public ResponseEntity<?> completeBooking(@RequestParam Long bookingId) {
+        BookingResponse response = bookingService.completeBooking(bookingId);
+        return createSuccessResponse("Tài xế đã hoàn thành chuyến đi", response);
+    }
 } 

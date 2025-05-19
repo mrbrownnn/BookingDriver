@@ -79,4 +79,37 @@ public class BookingServiceImpl implements BookingService {
                 .map(b -> commonMapper.convertToResponse(b, BookingResponse.class))
                 .toList();
     }
+
+    @Override
+    public BookingResponse acceptBooking(Long bookingId, Long driverId) {
+        Optional<Booking> bookingOpt = bookingRepository.findById(bookingId);
+        Optional<com.structure.booking.domain.entities.Driver> driverOpt = driverRepository.findById(driverId);
+        if (bookingOpt.isEmpty() || driverOpt.isEmpty()) {
+            throw new IllegalArgumentException("Không tìm thấy booking hoặc tài xế");
+        }
+        Booking booking = bookingOpt.get();
+        if (!com.structure.booking.domain.enums.BookingStatus.PENDING.name().equals(booking.getStatus().name())) {
+            throw new IllegalStateException("Chỉ có thể nhận chuyến đi ở trạng thái PENDING");
+        }
+        booking.setDriver(driverOpt.get());
+        booking.setStatus(com.structure.booking.domain.enums.BookingStatus.ACCEPTED);
+        Booking saved = bookingRepository.save(booking);
+        return commonMapper.convertToResponse(saved, BookingResponse.class);
+    }
+
+    @Override
+    public BookingResponse completeBooking(Long bookingId) {
+        Optional<Booking> bookingOpt = bookingRepository.findById(bookingId);
+        if (bookingOpt.isEmpty()) {
+            throw new IllegalArgumentException("Không tìm thấy booking");
+        }
+        Booking booking = bookingOpt.get();
+        if (!com.structure.booking.domain.enums.BookingStatus.IN_PROGRESS.name().equals(booking.getStatus().name()) &&
+            !com.structure.booking.domain.enums.BookingStatus.ACCEPTED.name().equals(booking.getStatus().name())) {
+            throw new IllegalStateException("Chỉ có thể hoàn thành chuyến đi ở trạng thái IN_PROGRESS hoặc ACCEPTED");
+        }
+        booking.setStatus(com.structure.booking.domain.enums.BookingStatus.COMPLETED);
+        Booking saved = bookingRepository.save(booking);
+        return commonMapper.convertToResponse(saved, BookingResponse.class);
+    }
 } 

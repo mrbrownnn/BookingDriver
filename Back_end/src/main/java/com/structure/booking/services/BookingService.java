@@ -10,4 +10,6 @@ public interface BookingService {
     BookingResponse getBookingById(Long id);
     List<BookingResponse> getBookingsByUser(Long userId);
     List<BookingResponse> getAllBookings();
+    BookingResponse acceptBooking(Long bookingId, Long driverId);
+    BookingResponse completeBooking(Long bookingId);
 } 
