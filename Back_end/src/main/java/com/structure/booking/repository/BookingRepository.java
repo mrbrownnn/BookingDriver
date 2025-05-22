@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BookingRepository extends JpaRepository<Booking, Long> {
-    // Thêm các phương thức custom nếu phát triển trong dự án tương lai
-} 
+    // thêm feature nếu phát triển thêm
+}
